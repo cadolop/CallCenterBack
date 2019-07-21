@@ -1,0 +1,17 @@
+{"properties": [
+  {
+    "name": "api.cfg.corepoolsize",
+    "type": "java.lang.String",
+    "description": "A description for 'api.cfg.corepoolsize'"
+  },
+  {
+    "name": "api.cfg.maxpoolsize",
+    "type": "java.lang.String",
+    "description": "A description for 'api.cfg.maxpoolsize'"
+  },
+  {
+    "name": "api.cfg.queuecapacity",
+    "type": "java.lang.String",
+    "description": "A description for 'api.cfg.queuecapacity'"
+  }
+]}
