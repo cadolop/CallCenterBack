@@ -10,6 +10,15 @@ import com.callcenter.back.impl.EmployeeList;
 import com.callcenter.back.model.Employee;
 import com.callcenter.back.service.IDispatcher;
 
+/**
+ * <h1>Clase Dispatcher</h1>
+ * Clase servicio que implementa la logica de negicio del callcenter y su despacho
+ *
+ * @author  <a href="mailto:cadolop@gmail.com">Carlos Adolfo Lopez</a>
+ * @version 1.0
+ * @since 20/07/2019
+ * @project CallCenterBack
+ */
 @Service
 public class Dispatcher implements IDispatcher {
 	private static final Logger LOGGER = LoggerFactory.getLogger(Dispatcher.class);
@@ -20,9 +29,14 @@ public class Dispatcher implements IDispatcher {
 	public Dispatcher() {
 	}
 
+    /**
+     * Metodo de asigancion de llamadas al empleado que este disponible para la llamada
+     *
+     * @param call idetificado de llamada
+     */
 	@Async
 	@Override
-	public void dispatcherCall(String call) {
+	public void dispatchCall(String call) {
 		// Cada llamada puede durar un tiempo aleatorio entre 5 y 10 segundos.
 		long time = (long) Math.floor(Math.random() * (10000 - 4999 + 1) + 4999);
 		try {
@@ -37,6 +51,12 @@ public class Dispatcher implements IDispatcher {
 		}
 	}
 
+    /**
+     * Metodo que busca al empleado que este disponible
+     * llamadas
+     *
+     * @return Employee el empleado disponible
+     */
 	private Employee getEmployee() {
 		int i = 0;
 		for (Employee employee : employeeList.getListEmployees()) {
@@ -50,6 +70,12 @@ public class Dispatcher implements IDispatcher {
 		return null;
 	}
 
+    /**
+     * Metodo que libera un empleado al terminar la llamada
+     * llamadas
+     *
+     * @param employeeTarget Empleado a liberar
+     */
 	private void setFreeEmployee(Employee employeeTarget) {
 		int i = 0;
 		for (Employee employee : employeeList.getListEmployees()) {

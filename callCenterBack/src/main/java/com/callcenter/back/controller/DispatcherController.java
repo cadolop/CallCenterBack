@@ -11,6 +11,15 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.callcenter.back.service.IDispatcher;
 
+/**
+ * <h1>Clase DispatcherController</h1>
+ * Clase controller que expone los servicios a llamar
+ *
+ * @author  <a href="mailto:cadolop@gmail.com">Carlos Adolfo Lopez</a>
+ * @version 1.0
+ * @since 20/07/2019
+ * @project CallCenterBack
+ */
 @RestController
 @RequestMapping("/dispatcher")
 public class DispatcherController {
@@ -35,7 +44,7 @@ public class DispatcherController {
 		}
 		for (int i = 0; i < size; i++) {
 			numberCall++;
-			dispatcher.dispatcherCall("" + numberCall);
+			dispatcher.dispatchCall("" + numberCall);
 		}
 		return ResponseEntity.status(HttpStatus.OK).build();
 	}

@@ -12,6 +12,15 @@ import com.callcenter.back.impl.EmployeeList;
 import com.callcenter.back.impl.Priority;
 import com.callcenter.back.model.Employee;
 
+/**
+ * <h1>Clase EmployeeListConfig</h1>
+ * Clase que configura la lista de empleados
+ *
+ * @author  <a href="mailto:cadolop@gmail.com">Carlos Adolfo Lopez</a>
+ * @version 1.0
+ * @since 20/07/2019
+ * @project CallCenterBack
+ */
 @Configuration
 public class EmployeeListConfig {
 

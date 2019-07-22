@@ -3,8 +3,7 @@ package com.callcenter.back.model;
 import com.callcenter.back.enums.EmployeeEnum;
 
 /**
- * <h1>Clase Empleado</h1> Clase modelo con las propiedades de cada empleado del
- * contact center
+ * <h1>Clase Empleado</h1> Clase modelo con las propiedades de cada empleado del contact center
  *
  * @author <a href="mailto:cadolop@gmail.com">Carlos Adolfo Lopez</a>
  * @version 1.0
